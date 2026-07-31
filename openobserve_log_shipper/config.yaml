@@ -1,15 +1,14 @@
 # https://developers.home-assistant.io/docs/add-ons/configuration
 name: OpenObserve Log Shipper
-version: "0.1.0"
+version: "0.1.1"
 slug: openobserve_log_shipper
 description: Tail Home Assistant log files and forward them to OpenObserve.
 url: "https://github.com/Shaffer-Softworks/home-assistant-openobserve-addon"
 arch:
+  # Official Fluent Bit Debian packages support amd64 and aarch64 only.
   - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
+
 startup: services
 boot: auto
 init: false
